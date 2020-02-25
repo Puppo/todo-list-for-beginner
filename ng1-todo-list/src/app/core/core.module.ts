@@ -7,6 +7,8 @@ import * as angular from 'angular';
 import { App } from './components/app/app.component';
 import { Root } from './components/root/root.component';
 
+import { DateFormat } from './filters/date-format/date-format.filter';
+
 /**
  * Import Module Configuration
  */
@@ -17,6 +19,16 @@ export const moduleName =
   angular.module('application.core', [
       'ui.router'
   ])
+
+  /**
+   * Register Module Filters
+   */
+
+   .filter(DateFormat.selector, DateFormat.filter)
+
+  /**
+   * Register Module Directives
+   */
 
   /**
    * Register Module Components

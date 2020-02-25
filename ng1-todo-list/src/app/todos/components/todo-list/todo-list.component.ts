@@ -27,7 +27,7 @@ export class TodoList implements angular.IComponentOptions {
   static template = `
   <div class="todo-list" ng-repeat="todo in $ctrl.todos">
     <span>{{ todo.description }}</span>
-    <span ng-if="todo.dueDate">{{ todo.dueDate | date }}</span>
+    <span ng-if="todo.dueDate">{{ todo.dueDate | dateFormat }}</span>
     <a href="" ng-click="$ctrl.remove(todo)">
       <i class="pull-right glyphicon glyphicon-remove"></i>
     </a>
