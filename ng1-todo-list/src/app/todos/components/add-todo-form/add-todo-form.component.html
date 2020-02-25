@@ -1,0 +1,11 @@
+<form name="addTodoForm" ng-submit="$ctrl.submit()" novalidate>
+  <div class="form-group">
+    <label>Description</label>
+    <input type="text" class="form-control" ng-model="$ctrl.description" placeholder="description" required>
+  </div>
+  <div class="form-group">
+    <label>Due Date</label>
+    <input type="date" class="form-control" ng-model="$ctrl.dueDate" placeholder="due date">
+  </div>
+  <button class="btn btn-primary btn-block" type="submit" ng-disabled="addTodoForm.$invalid">Add</button>
+</form>
