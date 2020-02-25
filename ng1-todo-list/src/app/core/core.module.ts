@@ -7,6 +7,8 @@ import * as angular from 'angular';
 import { App } from './components/app/app.component';
 import { Root } from './components/root/root.component';
 
+import { WindowEventsDirective } from './directives/window-events/window-events.directive';
+
 import { DateFormat } from './filters/date-format/date-format.filter';
 
 /**
@@ -29,6 +31,7 @@ export const moduleName =
   /**
    * Register Module Directives
    */
+  .directive(WindowEventsDirective.selector, WindowEventsDirective.factory)
 
   /**
    * Register Module Components
